@@ -1,1 +1,1 @@
-web: python main.py -p $PORT
+voccer: python main.py
