@@ -2,7 +2,6 @@ import json
 
 from bot import VoccerBot
 
-
 def main():
     # Load session đăng nhập từ trước nếu co
     session_cookies = ''
