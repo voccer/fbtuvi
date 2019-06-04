@@ -22,7 +22,7 @@ def main():
         json.dump(session_cookies_new, outfile)
 
     # Lắng nghe phản hồi từ messager
-    client.listen()
+    client.listen('0.0.0.0')
 
 
 if __name__ == '__main__':
