@@ -30,7 +30,7 @@ class VoccerBot(Client):
                     self.send(Message(text=loi_phan), thread_id=thread_id, thread_type=thread_type)
                 else:
                     self.send(Message(
-                        text='\n \n🙂 Tôi là Bot chat của Trong Duc. \n- Hiện tại anh ấy không thể rep tin nhắn ngay được. \n- Nếu xem tử vi gõ /tuvi <tuổi>; ví dụ: /tuvi sửu. \n-Nếu xem cung hoàng đạo gõ /hoangdao <cung>; \n ví dụ: /hoangdao song ngư\n- Tin nhắn của bạn: {0}'.format(
+                        text='\n \n🙂 Xin Chào. Tôi là Bot chat của Trong Duc. \n- Hiện tại anh ấy không thể rep tin nhắn ngay được. \n- Nếu xem tử vi gõ /tuvi <tuổi>; ví dụ: /tuvi sửu. \n-Nếu xem cung hoàng đạo gõ /hoangdao <cung>; \n ví dụ: /hoangdao song ngư\n- Tin nhắn của bạn: {0}'.format(
                             message_object.text)),
                         thread_id=thread_id,
                         thread_type=thread_type
