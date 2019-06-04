@@ -2,6 +2,7 @@ import json
 
 from bot import VoccerBot
 
+
 def main():
     # Load session đăng nhập từ trước nếu co
     session_cookies = ''
@@ -21,7 +22,7 @@ def main():
         json.dump(session_cookies_new, outfile)
 
     # Lắng nghe phản hồi từ messager
-    client.listen('0.0.0.0')
+    client.listen()
  #abc
 
 if __name__ == '__main__':
