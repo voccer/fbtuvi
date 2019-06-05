@@ -7,14 +7,14 @@ def main():
     # Load session đăng nhập từ trước nếu co
     session_cookies = ''
     try:
-        with open('sesssion.json') as f:
+        with open('session.json') as f:
             session_cookies = json.load(f)
     except Exception as e:
         print(e)
     finally:
         pass
 
-    client = VoccerBot('nduc535@gmail.com', 'traduc2002', session_cookies='')
+    client = VoccerBot('nduc535@gmail.com', 'traduc2008', session_cookies='')
 
     # Lấy session và lưu vào file để lần sau dùng cho đăng nhập
     session_cookies_new = client.getSession()
