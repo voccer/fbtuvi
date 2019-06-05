@@ -14,7 +14,7 @@ def main():
     finally:
         pass
 
-    client = VoccerBot('voccer123@gmail.com', 'ducquang', session_cookies='')
+    client = VoccerBot("voccer123@gmail.com", "ducquang", session_cookies='')
 
     # Lấy session và lưu vào file để lần sau dùng cho đăng nhập
     session_cookies_new = client.getSession()
