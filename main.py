@@ -7,7 +7,7 @@ def main():
     # Load session đăng nhập từ trước nếu co
     session_cookies = ''
     try:
-        with open('session.json') as f:
+        with open('session_mark.json') as f:
             session_cookies = json.load(f)
     except Exception as e:
         print(e)
