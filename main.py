@@ -29,5 +29,4 @@ if __name__ == '__main__':
     print('server hoat dong nhe')
     main()
 
-print("hello")
 
