@@ -23,8 +23,7 @@ def main():
 
     # Lắng nghe phản hồi từ messager
     client.listen()
- #abc
-
+ 
 if __name__ == '__main__':
     print('server hoat dong nhe')
     main()
