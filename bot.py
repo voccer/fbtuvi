@@ -39,14 +39,12 @@ class VoccerBot(Client):
                         thread_type=thread_type
                     )
                 else:
-                    self.send(Message(
-                        text=),
+                    self.send(Message(text=other_text),
                         thread_id=thread_id,
                         thread_type=thread_type
                     )
             else:
-                self.send(Message(
-                        text='\n \n🙂 Xin Chào. Tôi là Bot chat của Voccer. \n- Hiện tại anh ấy không thể rep tin nhắn ngay được. \n- Nếu xem tử vi gõ /tuvi <tuổi>; ví dụ: /tuvi sửu. \n-Nếu xem cung hoàng đạo gõ /hoangdao <cung>; \n ví dụ: /hoangdao song ngư\n'),
+                self.send(Message(text=other_text),
                         thread_id=thread_id,
                         thread_type=thread_type
                     )
