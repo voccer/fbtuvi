@@ -3,24 +3,26 @@ import json
 from bot import VoccerBot
 
 
-def main():
-    # Load session đăng nhập từ trước nếu co
+def main(user):
     session_cookies = ''
     try:
-        with open('session_0392571400.json') as f:
+        with open('./session/session_{}.json'.format(user)) as f:
             session_cookies = json.load(f)
     except Exception as e:
         print(e)
     finally:
         pass
-
-    client = VoccerBot("user", "password", session_cookies=session_cookies)
+    
+    if session_cookies:
+        client = VoccerBot("user", "password", session_cookies=session_cookies)
     # Lắng nghe phản hồi từ messager
-    client.listen()
- 
+        client.listen()
+    else:
+        print('not found cookies, please insert them')
 if __name__ == '__main__':
     print('server hoat dong nhe')
-    main()
+    user = '0392571400'
+    main(user)
 
 
 
