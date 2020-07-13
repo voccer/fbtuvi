@@ -27,7 +27,7 @@ def main(user):
 if __name__ == '__main__':
     print('server hoat dong nhe')
     user = '0392571400'
-    # main(user)
+    main(user)
 
 
 
