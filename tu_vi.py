@@ -47,3 +47,9 @@ class TuVi():
         if loi_phan == '❌ Bạn đã nhập sai cung hoàng đạo !!':
             loi_phan = loi_phan + '\n Bạch Dương (21/3-20/4) \n Kim Ngưu (21/4-20/5) \n Song Tử (21/5-21/6) \n Cự Giải (22/6-22/7) \n Sư tử (23/7-22/8) \n Xử Nữ (23/8-22/9) \n Thiên Bình (23/9-23/10) \n Bọ Cạp (24/10-22/11) \n Nhân Mã (23/11-21/12) \n Ma Kết (22/12-19/1) \n Bảo Bình (20/1-18/2) \n Song Ngư (19/2-20/3)'
         return loi_phan
+
+
+
+loiphan = TuVi().con_giap(Cgiap='dan')
+loiphan = TuVi().cung_hoang_dao(cung_hd='Bạch Dương')
+print(loiphan)
