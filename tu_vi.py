@@ -50,6 +50,6 @@ class TuVi():
 
 
 
-loiphan = TuVi().con_giap(Cgiap='dan')
-loiphan = TuVi().cung_hoang_dao(cung_hd='Bạch Dương')
-print(loiphan)
+# loiphan = TuVi().con_giap(Cgiap='dan')
+# loiphan = TuVi().cung_hoang_dao(cung_hd='Bạch Dương')
+# print(loiphan)
