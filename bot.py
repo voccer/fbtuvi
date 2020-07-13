@@ -30,7 +30,7 @@ class VoccerBot(Client):
                     loi_phan = tuvi.cung_hoang_dao(cung_hd=cung)
                     # print('loi phan cua toi la {}'.format(loi_phan))
                     self.send(Message(text=loi_phan), thread_id=thread_id, thread_type=thread_type)
-                elif '/lich' in message_object:
+                elif '/lich' in message_object.text:
                     solar_today = datetime.date.today()
                     lunar_today = Converter.Solar2Lunar(Solar(solar_today.year, solar_today.month, solar_today.day))
                     self.send(Message(
