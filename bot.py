@@ -13,7 +13,6 @@ other_text = '🙂 Xin Chào. Tôi là Bot chat của Trong Duc - Voccer. \n- Hi
 class VoccerBot(Client):
     
     def onMessage(self, author_id, message_object, thread_id, thread_type, **kwargs):
-        # log.info("{} from {} in {}".format(message_object, thread_id, thread_type.name))
         sleep = random.randint(5, 15)
 #       self.markAsDelivered(thread_id, message_object.uid)
 #       self.markAsRead(thread_id)
