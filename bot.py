@@ -4,6 +4,8 @@ from fbchat import log, Client
 import datetime
 from tu_vi import TuVi
 from lunarcalendar import Converter, Solar, Lunar
+import random
+import time
 
 
 other_text = '🙂 Xin Chào. Tôi là Bot chat của Trong Duc - Voccer. \n- Hiện tại anh ấy không thể rep tin nhắn ngay được. \n- Nếu xem tử vi gõ /tuvi <tuổi>; ví dụ: /tuvi sửu. \n-Nếu xem cung hoàng đạo gõ /hoangdao <cung>; \n ví dụ: /hoangdao song ngư\n- xem lịch gõ /lich'
@@ -14,7 +16,8 @@ class VoccerBot(Client):
         self.markAsDelivered(thread_id, message_object.uid)
         self.markAsRead(thread_id)
         log.info("{} from {} in {}".format(message_object, thread_id, thread_type.name))
-        # log.info("hello")
+        sleep = random.randint(5, 15)
+
         if author_id != self.uid:
             if message_object.text:
                 if message_object.text == '/Getid' or message_object.text == '/getid':
@@ -32,6 +35,7 @@ class VoccerBot(Client):
                     # print('loi phan cua toi la {}'.format(loi_phan))
                     self.send(Message(text=loi_phan), thread_id=thread_id, thread_type=thread_type)
                 elif '/lich' in message_object.text:
+                    time.sleep(sleep)
                     solar_today = datetime.date.today()
                     lunar_today = Converter.Solar2Lunar(Solar(solar_today.year, solar_today.month, solar_today.day))
                     self.send(Message(
@@ -40,11 +44,13 @@ class VoccerBot(Client):
                         thread_type=thread_type
                     )
                 else:
+                    time.sleep(sleep)
                     self.send(Message(text=other_text),
                         thread_id=thread_id,
                         thread_type=thread_type
                     )
             else:
+                time.sleep(sleep)
                 self.send(Message(text=other_text),
                         thread_id=thread_id,
                         thread_type=thread_type
