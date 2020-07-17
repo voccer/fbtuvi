@@ -1,5 +1,5 @@
 import json
-import request
+import requests
 from bot import VoccerBot
 import datetime
 from lunarcalendar import Converter, Solar, Lunar
