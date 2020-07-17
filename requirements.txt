@@ -1,4 +1,3 @@
 requests==2.22.0
 LunarCalendar==0.0.9
 fbchat==1.9.7
-request==2020.7.1
