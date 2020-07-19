@@ -1,17 +1,11 @@
+from fbchat import Client
+from fbchat.models import *
 import json
-import requests
-from bot import VoccerBot
-import datetime
-from lunarcalendar import Converter, Solar, Lunar
-
-def get_birthday():
-    r = requests.get('https://docs.google.com/document/u/0/export?format=txt&id=1b2aQMfZvhLhqs5bnGrdNZUnOSmCGsuNZeSH8Qk6ndrg&token=AC4w5VjlljBzAvNU8CtCSnvvFwe52p-2-w%3A1589941528767&ouid=102939292131381354747&includes_info_params=true&inspectorResult=%7B%22pc%22%3A1%2C%22lplc%22%3A20%7D')
-    b = r.text
+import time
 
 def main(user):
     session_cookies = ''
     user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
-
     try:
         with open('./session/session_{}.json'.format(user)) as f:
             session_cookies = json.load(f)
@@ -20,14 +14,16 @@ def main(user):
     finally:
         pass
     if session_cookies:
-        client = VoccerBot("user", "password", user_agent=user_agent, session_cookies=session_cookies)
-    # Lắng nghe phản hồi từ messager
-        client.listen()
+        client = Client("user", "password", user_agent=user_agent, session_cookies=session_cookies)
+        #send message:
+        while True:
+            time.sleep(300)
+            client.send(Message(text='get activate'), thread_id='100038437520170', thread_type=ThreadType.USER)
     else:
         print('not found cookies, please insert them')
 if __name__ == '__main__':
     print('server hoat dong nhe')
-    user = '0392571400'
+    user = 'voccer37'
     main(user)
 
 
