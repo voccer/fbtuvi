@@ -1,8 +1,8 @@
 import json
 
 
-user_list = ['0335168790', '0392571400']
-user = user_list[1]
+user_list = ['0335168790', '0392571400', 'nduc']
+user = user_list[2]
 
 with open('./session_cookies_{}.json'.format(user), 'r') as f:
     session = json.load(f)
