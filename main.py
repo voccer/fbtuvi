@@ -22,7 +22,10 @@ def main(user):
         pass
     if session_cookies:
         client = VoccerBot("user", "password", user_agent=user_agent, session_cookies=session_cookies)
-    
+        user = client.searchForUsers('tra', limit=5)
+        for i in user:
+            if i.is_friend:
+                print(i)
     # Lắng nghe phản hồi từ messager
         # client.listen()
     else:
