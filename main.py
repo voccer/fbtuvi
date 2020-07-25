@@ -2,7 +2,7 @@ from fbchat import Client
 from fbchat.models import *
 import json
 import time
-
+import random 
 def main(user):
     session_cookies = ''
     user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"
@@ -17,7 +17,8 @@ def main(user):
         client = Client("user", "password", user_agent=user_agent, session_cookies=session_cookies)
         #send message:
         while True:
-            time.sleep(300)
+            time_sl = random.randint(100,500)
+            time.sleep(time_sl)
             client.send(Message(text='get activate'), thread_id='100038437520170', thread_type=ThreadType.USER)
     else:
         print('not found cookies, please insert them')
